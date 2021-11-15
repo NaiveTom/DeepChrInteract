@@ -1,8 +1,6 @@
 QuickStart
 ========================
 
-.. image:: img/data-center-carbonate-HERO.jpg
-
 
 
 Introduction to DeepChrInteract
