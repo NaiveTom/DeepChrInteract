@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'DeepChromeHiC'
+project = 'DeepChrInteract'
 copyright = '2021, bizi'
 author = 'bizi'
 

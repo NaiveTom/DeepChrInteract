@@ -62,12 +62,6 @@ This release includes multiple models:
 
 	.. image:: img/embedding_cnn_two_branch.png
 
-- ``embedding_dense``
-
-	Embed sequence merged from two regions using pretrained dna2vec embedding matrix as input, followed by multiple dense layers
-
-	.. image:: img/embedding_dense.png
-
 
 
 
@@ -110,7 +104,7 @@ Model options
 							Preprocess the data, if you enter [true] (case sensitive), then proceed, if no, pass this process. Note: This command only needs to be entered once.
 	  -m MODEL, --model MODEL
 							Enter the model name which your choose: [onehot_cnn_one_branch] / [onehot_cnn_two_branch] / [onehot_embedding_dense] / [onehot_embedding_cnn_one_branch] /
-							[onehot_embedding_cnn_two_branch] / [onehot_dense] / [onehot_resnet18] / [embedding_cnn_one_branch] / [embedding_cnn_two_branch] / [embedding_dense]
+							[onehot_embedding_cnn_two_branch] / [onehot_dense] / [onehot_resnet18] / [embedding_cnn_one_branch] / [embedding_cnn_two_branch]
 							(all use lowercase).
 	  -t TYPE, --type TYPE  Please choose [train] / [test] (all use lowercase).
 	  -n NAME, --name NAME  Enter the gene name of your choice (note: case sensitive).
