@@ -43,7 +43,7 @@ if __name__ == '__main__':
     # Parameters: select model
     ####################
     parser.add_argument('-m', '--model',
-                        help = 'Enter the model name which your choose: [onehot_cnn_one_branch] / [onehot_cnn_two_branch] / [onehot_embedding_dense] / [onehot_embedding_cnn_one_branch] / [onehot_embedding_cnn_two_branch] / [onehot_dense] / [onehot_resnet18] / [embedding_cnn_one_branch] / [embedding_cnn_two_branch] / [embedding_dense] (all use lowercase).',
+                        help = 'Enter the model name which your choose: [onehot_cnn_one_branch] / [onehot_cnn_two_branch] / [onehot_embedding_dense] / [onehot_embedding_cnn_one_branch] / [onehot_embedding_cnn_two_branch] / [onehot_dense] / [onehot_resnet18] / [embedding_cnn_one_branch] / [embedding_cnn_two_branch] (all use lowercase).',
                         required = False)
 
     ####################
@@ -110,7 +110,7 @@ if __name__ == '__main__':
         ####################
         if args.model not in ['onehot_cnn_one_branch', 'onehot_cnn_two_branch', 'onehot_embedding_dense', 
                               'onehot_dense', 'onehot_resnet18',
-                              'embedding_cnn_one_branch', 'embedding_cnn_two_branch', 'embedding_dense',
+                              'embedding_cnn_one_branch', 'embedding_cnn_two_branch',
                               'onehot_embedding_cnn_one_branch', 'onehot_embedding_cnn_two_branch']:
             print("Wrong model name!\nUse command python3 DeepChrInteract.py -h to see the correct model name!")
             exit(1)
@@ -153,7 +153,6 @@ if __name__ == '__main__':
             
         mkdir('result/' + args.name + '/embedding_cnn_one_branch')
         mkdir('result/' + args.name + '/embedding_cnn_two_branch')
-        mkdir('result/' + args.name + '/embedding_dense')
 
         mkdir('result/' + args.name + '/onehot_embedding_cnn_one_branch')
         mkdir('result/' + args.name + '/onehot_embedding_cnn_two_branch')
@@ -176,7 +175,7 @@ if __name__ == '__main__':
                 test_cnn_separate(args.name, args.model, args.object, int(args.length))
 
 
-        if args.model=='embedding_cnn_one_branch' or args.model=='embedding_cnn_two_branch' or args.model=='embedding_dense' \
+        if args.model=='embedding_cnn_one_branch' or args.model=='embedding_cnn_two_branch' \
            or args.model=='onehot_embedding_cnn_one_branch' or args.model=='onehot_embedding_cnn_two_branch':
 
             if args.type=='train':

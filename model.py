@@ -12,7 +12,7 @@ from lib.resnet import resnet_18
 
 
 
-MAX_LEN = 10001
+DEFAULT_LEN = 10001
 
 
 
@@ -205,7 +205,7 @@ def model_onehot_embedding_dense(gene_length):
     model = Sequential()
 
     # embedding层
-    model.add(Embedding(4097, 8, input_length=20002, trainable=True, input_shape=((gene_length*2, 5, 1))))
+    model.add(Embedding(4097, 8, input_length=gene_length*2, trainable=True, input_shape=((gene_length*2, 5, 1))))
 
    
 
@@ -332,8 +332,8 @@ def model_embedding_cnn_one_branch():
     ####################
     # 输入部分
     ####################
-    region_1 = Input(shape=(MAX_LEN,))
-    region_2 = Input(shape=(MAX_LEN,))
+    region_1 = Input(shape=(DEFAULT_LEN,))
+    region_2 = Input(shape=(DEFAULT_LEN,))
 
     ####################
     # embedding 部分
@@ -426,8 +426,8 @@ def model_embedding_cnn_two_branch():
     ####################
     # 输入部分
     ####################
-    region_1 = Input(shape=(MAX_LEN,))
-    region_2 = Input(shape=(MAX_LEN,))
+    region_1 = Input(shape=(DEFAULT_LEN,))
+    region_2 = Input(shape=(DEFAULT_LEN,))
 
     ####################
     # embedding 部分
@@ -560,8 +560,8 @@ def model_embedding_dense():
     ####################
     # 输入部分
     ####################
-    region_1 = Input(shape=(MAX_LEN,))
-    region_2 = Input(shape=(MAX_LEN,))
+    region_1 = Input(shape=(DEFAULT_LEN,))
+    region_2 = Input(shape=(DEFAULT_LEN,))
 
     ####################
     # embedding 部分
@@ -637,8 +637,8 @@ def model_onehot_embedding_cnn_one_branch():
     ####################
     # 输入部分
     ####################
-    region_1 = Input(shape=(MAX_LEN,))
-    region_2 = Input(shape=(MAX_LEN,))
+    region_1 = Input(shape=(DEFAULT_LEN,))
+    region_2 = Input(shape=(DEFAULT_LEN,))
 
     ####################
     # embedding 部分
@@ -738,8 +738,8 @@ def model_onehot_embedding_cnn_two_branch():
     ####################
     # 输入部分
     ####################
-    region_1 = Input(shape=(MAX_LEN,))
-    region_2 = Input(shape=(MAX_LEN,))
+    region_1 = Input(shape=(DEFAULT_LEN,))
+    region_2 = Input(shape=(DEFAULT_LEN,))
 
     ####################
     # embedding 部分
