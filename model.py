@@ -38,11 +38,11 @@ DEFAULT_LEN = 10001
 
 
 
-def model_onehot_cnn_one_branch(gene_length):
+def model_onehot_cnn_one_branch(region_length):
 
     model = Sequential()
      
-    model.add(Conv2D(64, kernel_size=(24, 1), strides=(4, 1), kernel_initializer='he_uniform', padding='same', activation = 'relu', input_shape=((gene_length*2, 5, 1))))
+    model.add(Conv2D(64, kernel_size=(24, 1), strides=(4, 1), kernel_initializer='he_uniform', padding='same', activation = 'relu', input_shape=((region_length*2, 5, 1))))
     model.add(BatchNormalization())
         
     model.add(Conv2D(64, kernel_size=(24, 1), strides=(4, 1), kernel_initializer='he_uniform', padding='same', activation = 'relu'))
@@ -102,10 +102,10 @@ def model_onehot_cnn_one_branch(gene_length):
 
 
 
-def model_onehot_cnn_two_branch(gene_length):
+def model_onehot_cnn_two_branch(region_length):
         
     # 模型1
-    input_1 = Input(shape = (gene_length, 5, 1))
+    input_1 = Input(shape = (region_length, 5, 1))
   
     model_1 = Conv2D(64, kernel_size = (24, 1), strides = (4, 1), kernel_initializer='he_uniform', padding = 'same', activation = 'relu')(input_1)
     model_1 = BatchNormalization()(model_1)
@@ -135,7 +135,7 @@ def model_onehot_cnn_two_branch(gene_length):
 
 
     # 模型2
-    input_2 = Input(shape = (gene_length, 5, 1))
+    input_2 = Input(shape = (region_length, 5, 1))
   
     model_2 = Conv2D(64, kernel_size = (24, 1), strides = (4, 1), kernel_initializer='he_uniform', padding = 'same', activation = 'relu')(input_2)
     model_2 = BatchNormalization()(model_2)
@@ -200,12 +200,12 @@ def model_onehot_cnn_two_branch(gene_length):
 
 
 
-def model_onehot_embedding_dense(gene_length):
+def model_onehot_embedding_dense(region_length):
       
     model = Sequential()
 
     # embedding层
-    model.add(Embedding(4097, 8, input_length=gene_length*2, trainable=True, input_shape=((gene_length*2, 5, 1))))
+    model.add(Embedding(4097, 8, input_length=region_length*2, trainable=True, input_shape=((region_length*2, 5, 1))))
 
    
 
@@ -243,11 +243,11 @@ def model_onehot_embedding_dense(gene_length):
 
 
 
-def model_onehot_dense(gene_length):
+def model_onehot_dense(region_length):
   
     model = Sequential()
 
-    model.add( Flatten( input_shape=((gene_length*2, 5, 1)) ) )
+    model.add( Flatten( input_shape=((region_length*2, 5, 1)) ) )
     model.add(BatchNormalization())
   
     model.add(Dense(512, kernel_initializer='glorot_uniform'))
@@ -281,7 +281,7 @@ def model_onehot_dense(gene_length):
 
 
 
-def model_onehot_resnet18(gene_length):
+def model_onehot_resnet18(region_length):
 
     model = resnet_18() # ResNet152网络，这样的话会训练的无比慢，所以建议用50或者101
 
@@ -292,7 +292,7 @@ def model_onehot_resnet18(gene_length):
     model = resnet_152()
     """
 
-    model.build( input_shape = (None, gene_length*2, 5, 1) )
+    model.build( input_shape = (None, region_length*2, 5, 1) )
 
     model.compile(loss = 'categorical_crossentropy',
                   optimizer = Adam(lr = 5e-5, decay = 1e-5),
@@ -643,8 +643,8 @@ def model_onehot_embedding_cnn_one_branch():
     ####################
     # embedding 部分
     ####################
-    embedding_region_1 = Embedding(4097, 100, input_length=20002, trainable=True)(region_1)
-    embedding_region_2 = Embedding(4097, 100, input_length=20002, trainable=True)(region_2)
+    embedding_region_1 = Embedding(4097, 100, input_length=DEFAULT_LEN*2, trainable=True)(region_1)
+    embedding_region_2 = Embedding(4097, 100, input_length=DEFAULT_LEN*2, trainable=True)(region_2)
 
     ####################
     # 合并部分
@@ -744,8 +744,8 @@ def model_onehot_embedding_cnn_two_branch():
     ####################
     # embedding 部分
     ####################
-    embedding_region_1 = Embedding(4097, 100, input_length=20002, trainable=True)(region_1)
-    embedding_region_2 = Embedding(4097, 100, input_length=20002, trainable=True)(region_2)
+    embedding_region_1 = Embedding(4097, 100, input_length=DEFAULT_LEN*2, trainable=True)(region_1)
+    embedding_region_2 = Embedding(4097, 100, input_length=DEFAULT_LEN*2, trainable=True)(region_2)
 
     ####################
     # enhancer 输入部分
