@@ -18,7 +18,7 @@ Data and codes in https://github.com/lichen-lab/DeepChrInteract are listed as fo
 
 	- ``model.py``
 
-		Stored ``all models``, including: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch`` / ``embedding_dense``
+		Stored ``all models``, including: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch``
 
 	- ``train.py``
 	

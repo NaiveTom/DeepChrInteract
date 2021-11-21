@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeepChrInteract &mdash; DeepChromeHiC 2.0 documentation</title>
+  <title>DeepChrInteract &mdash; DeepChrInteract 2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+            <a href="index.html" class="icon icon-home"> DeepChrInteract
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -57,7 +57,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">DeepChromeHiC</a>
+          <a href="index.html">DeepChrInteract</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -135,12 +135,6 @@
 <img alt="_images/embedding_cnn_two_branch.png" src="_images/embedding_cnn_two_branch.png" />
 </div></blockquote>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">embedding_dense</span></code></p>
-<blockquote>
-<div><p>Embed sequence merged from two regions using pretrained dna2vec embedding matrix as input, followed by multiple dense layers</p>
-<img alt="_images/embedding_dense.png" src="_images/embedding_dense.png" />
-</div></blockquote>
-</li>
 </ul>
 </section>
 <section id="model-options">
@@ -178,7 +172,7 @@ optional arguments:
                                                 Preprocess the data, <span class="k">if</span> you enter <span class="o">[</span>true<span class="o">]</span> <span class="o">(</span><span class="k">case</span> sensitive<span class="o">)</span>, <span class="k">then</span> proceed, <span class="k">if</span> no, pass this process. Note: This <span class="nb">command</span> only needs to be entered once.
   -m MODEL, --model MODEL
                                                 Enter the model name which your choose: <span class="o">[</span>onehot_cnn_one_branch<span class="o">]</span> / <span class="o">[</span>onehot_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>onehot_embedding_dense<span class="o">]</span> / <span class="o">[</span>onehot_embedding_cnn_one_branch<span class="o">]</span> /
-                                                <span class="o">[</span>onehot_embedding_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>onehot_dense<span class="o">]</span> / <span class="o">[</span>onehot_resnet18<span class="o">]</span> / <span class="o">[</span>embedding_cnn_one_branch<span class="o">]</span> / <span class="o">[</span>embedding_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>embedding_dense<span class="o">]</span>
+                                                <span class="o">[</span>onehot_embedding_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>onehot_dense<span class="o">]</span> / <span class="o">[</span>onehot_resnet18<span class="o">]</span> / <span class="o">[</span>embedding_cnn_one_branch<span class="o">]</span> / <span class="o">[</span>embedding_cnn_two_branch<span class="o">]</span>
                                                 <span class="o">(</span>all use lowercase<span class="o">)</span>.
   -t TYPE, --type TYPE  Please choose <span class="o">[</span>train<span class="o">]</span> / <span class="o">[</span>test<span class="o">]</span> <span class="o">(</span>all use lowercase<span class="o">)</span>.
   -n NAME, --name NAME  Enter the gene name of your choice <span class="o">(</span>note: <span class="k">case</span> sensitive<span class="o">)</span>.
