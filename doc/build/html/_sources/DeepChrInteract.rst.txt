@@ -151,7 +151,7 @@ Model training
 
 	- ``-m onehot_cnn_one_branch``
 	
-	This parameter is to select the deep learning model. A total of 10 deep learning models can be chosen, namely: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch`` / ``embedding_dense``
+	This parameter is to select the deep learning model. A total of 10 deep learning models can be chosen, namely: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch``
 	
 	- ``-t train``
 	
@@ -173,7 +173,7 @@ Model testing
 
 	- ``-m onehot_cnn_one_branch``
 	
-	This parameter is to select the deep learning model. A total of 10 deep learning models can be chosen, namely: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch`` / ``embedding_dense``
+	This parameter is to select the deep learning model. A total of 10 deep learning models can be chosen, namely: ``onehot_cnn_one_branch`` / ``onehot_cnn_two_branch`` / ``onehot_embedding_dense`` / ``onehot_embedding_cnn_one_branch`` / ``onehot_embedding_cnn_two_branch`` / ``onehot_dense`` / ``onehot_resnet18`` / ``embedding_cnn_one_branch`` / ``embedding_cnn_two_branch``
 	
 	- ``-t test``
 	
